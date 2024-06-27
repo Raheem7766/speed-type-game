@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPEED-TYPE</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    background-color: aqua;
+}
+
+.child {
+    width: 100%;
+    height: 150px;
+    background-color: purple;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.game {
+    height: 585px;
+    width: 50%;
+    background-color: black;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.text {
+    width: 100%;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.words {
+    height: 150px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    margin: auto;
+}
+.word1{
+    border-bottom: 2px solid green;
+}
+.word1,
+.word2 {
+    height: 50%;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    height: 50px;
+    width: 190px;
+    background-color: white;
+    margin-left: 37.5%;
+    margin-top: 40px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+option {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+textarea {
+    height: 70px;
+    width: 70%;
+    background-color: white;
+    margin-left: 15%;
+    border-radius: 5px;
+    margin-top: 30px;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.num {
+    height: 60px;
+    width: 70%;
+    background-color: blue;
+    margin: auto;
+    display: flex;
+}
+
+.num1,
+.num2 {
+    height: 100%;
+    width: 25%;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.win {
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color {
+    color: red;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    .game {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .game {
+        width: 80%;
+    }
+
+    .child {
+        font-size: 35px;
+    }
+
+    .word1,
+    .word2 {
+        font-size: 20px;
+    }
+
+    select {
+        margin-left: 25%;
+        width: 80%;
+    }
+
+    textarea {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .game {
+        width: 90%;
+    }
+
+    .child {
+        font-size: 30px;
+        height: 130px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .word1,
+    .word2 {
+        font-size: 18px;
+    }
+
+    select {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    textarea {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 576px) {
+    .child {
+        font-size: 25px;
+        height: 110px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .word1,
+    .word2 {
+        font-size: 16px;
+    }
+
+    select {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    textarea {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+    .num{
+        width: 95%;
+    }
+    .num1,
+    .num2,
+    .win {
+        font-size: 18px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="child">SPEED &nbsp; TYPING &nbsp; GAME</div>
+        <div class="game">
+            <div class="text">Type the following word in <span class="span">9</span> seconds</div>
+            <div class="words">
+                <div class="word1"></div>
+                <div class="word2">Difficulty:</div>
+            </div>
+            <select>
+                <option value="simple" class="Simple">Simple</option>
+                <option value="medium" class="medium">Medium</option>
+                <option value="hard" class="hard">Hard</option>
+            </select>
+            <textarea name="word" id="" cols="30" rows="10"></textarea>
+            <div class="num">
+                <div class="num1">Time: <span class="time">00</span> </div>
+                <div class="win"></div>
+                <div class="num2">Score: <span class="scr">00</span></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let text = document.querySelector('.text')
+        let word1 = document.querySelector('.word1')
+        let select = document.querySelector('select')
+        let textarea = document.querySelector('textarea')
+        let time = document.querySelector('.time')
+        let scr = document.querySelector('.scr')
+        let win = document.querySelector('.win')
+        let span = document.querySelector('.span')
+        let score = 0
+        let words = ['Javascript', 'HTML', 'CSS', 'CAT', 'DOG', 'Defaulter', 'Python', 'Laptop', 'ECHO', 'HELLO', 'GAME']
+        let randomword = words[Math.floor(Math.random() * words.length)]
+        let level = { simple: 9, medium: 6, hard: 4 }
+        let currentLevel = level.simple
+        let timer = currentLevel + 1
+
+        select.addEventListener("change", update)
+        window.addEventListener("load", Loading)
+        let interv
+
+        function Loading() {
+
+            word1.innerHTML = randomword
+            textarea.focus()
+
+            interv = setInterval(startTimer, 1000)
+        }
+
+        function startTimer() {
+            if (timer > 0) {
+                timer--
+                time.innerHTML = timer
+                random()
+            }
+            else if (timer == 0) {
+                win.innerHTML = 'Time out!'
+                clearInterval(interv)
+            }
+        }
+        function update(ev) {
+            let OptValues = ev.target.value
+            textarea.focus()
+            console.log(OptValues);
+
+
+            if (OptValues == 'simple') {
+                currentLevel = level.simple
+                timer = currentLevel + 1
+                span.innerHTML = '9'
+            }
+            else if (OptValues == 'medium') {
+                currentLevel = level.medium
+                timer = currentLevel + 1
+                span.innerHTML = '6'
+            }
+            else if (OptValues == 'hard') {
+                currentLevel = level.hard
+                timer = currentLevel + 1
+                span.innerHTML = '4'
+            }
+        }
+        console.log(words[randomword]);
+        function random() {
+            let inp = textarea.value.trim()
+            if (randomword === inp) {
+                randomword = words[Math.floor(Math.random() * words.length)]
+                word1.innerHTML = randomword
+                score++
+                win.innerHTML = 'CORRCECT!!'
+                scr.innerHTML = score
+                textarea.value = ""
+            }
+            else {
+                win.innerHTML = ''
+            }
+        }
+
+
+
+        
+    </script>
+</body>
+
+</html>
